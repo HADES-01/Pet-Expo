@@ -18,7 +18,7 @@ const port  = process.env.PORT || 8080;
 // ================================================================================================
 
 // Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db);
+mongoose.connect(isDev ? config.db_dev : config.db,{useNewUrlParser: true,useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 
 const app = express();
@@ -58,12 +58,12 @@ if (isDev) {
   });
 }
 
-app.listen(port, '0.0.0.0', (err) => {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   }
 
-  console.info('>>> 🌎 Open http://0.0.0.0:%s/ in your browser.', port);
+  console.log(`https://localhost:${port}`);
 });
 
 module.exports = app;
