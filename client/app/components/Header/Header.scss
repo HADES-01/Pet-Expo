@@ -1,0 +1,39 @@
+.logo-text {
+  //display: inline;
+  margin: 0 !important;
+  //   font-size: 2em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: flex;
+  align-items: center;
+  span {
+    //text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-family: "Pacifico", cursive;
+    //font-family: "Jost", sans-serif;
+    //font-family: "Nunito", sans-serif;
+    //color: #ff4c8c;
+    color: #000;
+    font-size: 2em;
+    font-weight: 800;
+  }
+}
+.logo-img img {
+  width: 53px;
+  height: 53px;
+}
+header {
+  margin-top: 1%;
+}
+.header-flex-container {
+  display: flex;
+}
+.header-flex-container > div {
+  margin-left: 3%;
+}
+.logo-flex-container {
+  display: flex;
+  margin-left: 0% !important;
+}
+.logo-flex-container > div {
+  text-align: center;
+}
