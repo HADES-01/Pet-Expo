@@ -37,6 +37,21 @@ module.exports = {
         loader: 'babel-loader'
       },
 
+      //Images
+
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
+
+
       // SCSS files
       {
         test: /\.scss$/,
